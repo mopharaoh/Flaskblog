@@ -45,11 +45,10 @@ def login():
         user=User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password ,form.password.data):
             login_user(user,remember=False)
-            next_page= request.args.get('next')                                                 #for if you request any thing in url it will lead you to it after you login
+            next_page= request.args.get('next')                                                 #if you request any thing in url it will lead you to it after you login
             return redirect(next_page) if next_page else redirect(url_for('home'))
-        
         else:
-            flash('unsuccessful,pls check again bitch','danger')
+            flash('unsuccessful login, pls check again bitch','danger')
     return render_template('login.html',title="Login",form=form)
 
 @app.route('/logout')
