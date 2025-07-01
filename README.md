@@ -27,6 +27,7 @@ This is a **Flask-based Blog Web Application** that provides user authentication
 ## 📂 Project Structure
 
 project/
+```bash
 │
 ├── frist/ # Application package
 │ ├── templates/ # HTML templates
@@ -45,6 +46,7 @@ project/
 ├── README.md
 ├── requirements.txt
 └── run.py # Entry point
+```
 
 🏃‍♂️ Run Locally
 Clone the project:
